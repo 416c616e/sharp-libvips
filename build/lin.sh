@@ -97,7 +97,7 @@ VERSION_XML2=2.11.4
 VERSION_EXIF=0.6.24
 VERSION_LCMS2=2.15
 VERSION_MOZJPEG=4.1.3
-VERSION_PNG16=1.6.39
+VERSION_PNG16=1.6.40
 VERSION_SPNG=0.7.4
 VERSION_IMAGEQUANT=2.4.1
 VERSION_WEBP=1.3.0
@@ -105,7 +105,7 @@ VERSION_TIFF=4.5.1
 VERSION_ORC=0.4.34
 VERSION_PROXY_LIBINTL=0.4
 VERSION_GDKPIXBUF=2.42.10
-VERSION_FREETYPE=2.13.0
+VERSION_FREETYPE=2.13.1
 VERSION_EXPAT=2.5.0
 VERSION_ARCHIVE=3.6.2
 VERSION_FONTCONFIG=2.14.2
@@ -437,7 +437,7 @@ CFLAGS="${CFLAGS} -O3" meson setup _build --default-library=static --buildtype=r
 meson install -C _build --tag devel
 
 mkdir ${DEPS}/vips
-$CURL https://github.com/libvips/libvips/releases/download/v${VERSION_VIPS}/vips-$(without_prerelease $VERSION_VIPS).tar.xz | tar xJC ${DEPS}/vips --strip-components=1
+$CURL https://github.com/416c616e/libvips/releases/download/v${VERSION_VIPS}/vips-$(without_prerelease $VERSION_VIPS).tar.xz | tar xJC ${DEPS}/vips --strip-components=1
 cd ${DEPS}/vips
 # Backport libarchive-based dzsave
 $CURL https://raw.githubusercontent.com/libvips/build-win64-mxe/master/build/patches/vips-8-pr-3476.patch | patch -p1
